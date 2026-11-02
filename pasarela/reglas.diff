@@ -1,0 +1,31 @@
+--- /mnt/project-files/pasarela/esqueleto/mcp-pasarela/src/privacidad/reglas.ts	2026-10-21 09:03:54.529995000 +0000
++++ src/privacidad/reglas.ts	2026-10-29 15:36:35.399297212 +0000
+@@ -16,6 +16,10 @@
+   direccionvisita: "DIRECCION",
+   codpostalvisita: "CP",
+   referenciacatastral: "REFCAT",
++  // MCP de tickets (osTicket)
++  agente: "PERSONA",
++  solicitante: "PERSONA",
++  autor: "PERSONA",
+ };
+ 
+ // Líneas "Etiqueta: valor" de las respuestas en texto: DW (buscar_expediente) y agenda en markdown.
+@@ -26,10 +30,17 @@
+   "supervisor administrativo": "PERSONA",
+   "código postal": "CP",
+   coordenadas: "COORD",
++  // MCP de tickets (osTicket)
++  "- agente": "PERSONA",
++  "- solicitante": "PERSONA",
++  "- autor": "PERSONA",
+ };
+ 
+ // Columnas de las respuestas CSV (separador ;). MCP del DW (listar_expedientes, calculos_plazos).
+ export const COLUMNAS_CSV: Record<string, TipoDato> = {
+   tecnico: "PERSONA",
+   supervisor: "PERSONA",
++  // MCP de tickets (listar_tickets)
++  agente: "PERSONA",
++  solicitante: "PERSONA",
+ };
